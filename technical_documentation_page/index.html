@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Technical Documentation Page</title>
+</head>
+<body>
+    <nav id="navbar">
+        <header>Python Documentation</header>
+        <ul>
+          <li><a class="nav-link" href="#Introduction">Introduction</a></li>
+          <li>
+            <a class="nav-link" href="#What_you_should_already_know">What you should already know</a>
+          </li>
+          <li>
+            <a class="nav-link" href="#Python_and_JavaScript">Python and JavaScript</a>
+          </li>
+          <li><a class="nav-link" href="#Hello_world">Hello world</a></li>
+          <li><a class="nav-link" href="#Variables">Variables</a></li>
+          <li>
+            <a class="nav-link" href="#Declaring_variables">Declaring variables</a>
+          </li>
+          <li><a class="nav-link" href="#Variable_scope">Variable scope</a></li>
+          <li><a class="nav-link" href="#Constants">Constants</a></li>
+          <li><a class="nav-link" href="#Data_types">Data types</a></li>
+          <li>
+            <a class="nav-link" href="#Functions_in_Python">Functions in Python</a>
+          </li>
+          <li><a class="nav-link" href="#Function_declarations">Function declarations</a></li>
+    
+          <li><a class="nav-link" href="#Reference">Reference</a></li>
+        </ul>
+      </nav>
+      <main id="main-doc">
+        <section class="main-section" id="Introduction">
+          <header>Introduction</header>
+          <article>
+            <p>
+              Python is a cross-platform, object-oriented scripting language known for its simplicity and readability. It provides a wide range of functionalities and can be used in various environments. Python's standard library includes built-in objects like lists, dictionaries, and strings, along with essential language elements such as operators, control structures, and statements.
+            </p>
+  
+            <p>
+              JavaScript contains a standard library of objects, such as Array,
+              Date, and Math, and a core set of language elements such as
+              operators, control structures, and statements. Core JavaScript can
+              be extended for a variety of purposes by supplementing it with
+              additional objects; for example:
+            </p>
+            
+          </article>
+        </section>
+        <section class="main-section" id="What_you_should_already_know">
+          <header>What you should already know</header>
+          <article>
+            <p>Before diving into Python, it's beneficial to have a basic understanding of the following:</p>
+  
+            <ul>
+              <li>
+                General knowledge of programming concepts.
+              </li>
+              <li>Familiarity with how the Internet and the World Wide Web (WWW) work.</li>
+              <li>
+                Working knowledge of HTML (HyperText Markup Language).
+              </li>
+            </ul>
+          </article>
+        </section>
+        <section class="main-section" id="Python_and_JavaScript">
+          <header>Python and JavaScript</header>
+          <article>
+            <p>
+              While Python and JavaScript share some similarities, they also have fundamental differences. JavaScript, originally named LiveScript and later renamed JavaScript, shares some syntax and control-flow constructs with Java but does not have Java's static typing and strong type checking.
+            </p>
+  
+            <p>
+              JavaScript uses a prototype-based object model instead of the class-based object model found in Java. It supports functions as methods and has a more flexible approach to variable declaration and typing.
+            </p>
+            <p>
+              Unlike Java, JavaScript does not require explicit declaration of variables, classes, or methods. Access modifiers like public, private, or protected are not needed, and interfaces are not mandatory. Variables, parameters, and function return types are not explicitly typed.
+            </p>
+          </article>
+        </section>
+        <section class="main-section" id="Hello_world">
+          <header>Hello world</header>
+          <article>
+            To get started with Python, you can write your first "Hello world" program by following these steps:
+            <code>def greet_me(your_name):
+              print("Hello", your_name)
+          
+          greet_me("World")
+          ;
+            </code>
+  
+            Execute the code, and you will see the output: "Hello World."
+          </article>
+        </section>
+        <section class="main-section" id="Variables">
+          <header>Variables</header>
+          <p>
+            In Python, variables are used to store values. Variable names, called identifiers, must adhere to certain rules.
+          </p>
+          <p>
+            A Python identifier must start with a letter (a-z, A-Z) or an underscore (_). The subsequent characters can be letters, digits (0-9), or underscores. Python is case-sensitive, so uppercase and lowercase letters are distinct.
+          </p>
+          <p>
+            Examples of valid variable names: number_hits, temp99, _name.
+          </p>
+        </section>
+        <section class="main-section" id="Declaring_variables">
+          <header>Declaring variables</header>
+          <article>
+            There are multiple ways to declare variables in Python:
+            <p>
+              Using the = assignment operator: <code>x = 42
+              </code> This syntax declares a variable and assigns it a value. It can be used for both local and global variables.
+            </p>
+            <p>
+              By directly assigning a value without using the var keyword:
+              <code>x = 42
+              </code> This creates a global variable but is not recommended
+            </p>
+            <p>
+              Using the = assignment operator with the let keyword:<code> y = 13
+
+              </code> This syntax declares a block scope local variable. See Variable scope below.
+            </p>
+          </article>
+        </section>
+        <section class="main-section" id="Variable_scope">
+          <header>Variable scope</header>
+          <article>
+            <p>
+              When you declare a variable outside of any function, it is called a
+              global variable, because it is available to any other code in the
+              current document. When you declare a variable within a function, it
+              is called a local variable, because it is available only within that
+              function.
+            </p>
+  
+            <p>
+              In Python, variable scope determines the accessibility and lifetime of a variable.
+              Variables declared outside any function are global variables, accessible to all code within the current module. Variables declared within a function are local variables, only accessible within that function.
+            </p>
+
+            <p>
+              Unlike JavaScript, Python does not have block-level scope. In Python, a variable declared within a block (e.g., if statement) is still accessible outside the block if it was already declared.
+            </p>
+            <code>if True:
+              x = 5
+          
+          print(x)  # Output: 5
+          </code>
+            <p>
+              This behavior changes, when using the let declaration introduced in
+              ECMAScript 2015.
+            </p>
+  
+            <code>if (true) { let y = 5; } console.log(y); // ReferenceError: y is
+              not defined</code>
+          </article>
+        </section>
+        
+        <section class="main-section" id="Constants">
+          <header>Constants</header>
+          <article>
+            <p>
+              Python does not have built-in constants like JavaScript, but you can create named constants by convention using uppercase letters.
+            </p>
+  
+            <code>PI = 3.14
+            </code>
+            <p>
+              It's a common practice to treat these constants as read-only variables and not reassign them.
+            </p>
+  
+          </article>
+        </section>
+        <section class="main-section" id="Data_types">
+          <header>Data types</header>
+          <article>
+            <p>Python provides several built-in data types, including::</p>
+            <ul>
+              <li>
+                <p>Numeric types:</p>
+                <ul>
+                  <li>Integer: whole numbers without a fractional part (e.g., 42).</li>
+                  <li>Float: real numbers with a fractional part (e.g., 3.14159).</li>
+                </ul>
+                <ul>
+                  <li>Boolean: True or False values representing logical truth values.</li>
+                  <li>
+                    String: a sequence of characters enclosed in single quotes ('') or double quotes ("").
+                  </li>
+                  <li>
+                    List: an ordered collection of items enclosed in square brackets ([]).
+                  </li>
+                  <li>Dictionary: an unordered collection of key-value pairs enclosed in curly braces ({}) with a key-value mapping.</li>
+                  <li>Tuple: an ordered, immutable collection of items enclosed in parentheses (()).</li>
+                  <li>
+                    Set: an unordered collection of unique items enclosed in curly braces ({}) without duplicates.
+                  </li>
+                </ul>
+              </li>
+  
+              
+          </article>
+        </section>
+        <section class="main-section" id="Functions_in_Python">
+          <header>Functions in Python</header>
+          <article>
+            In Python, a function is defined using the def keyword followed by the function name, a list of arguments enclosed in parentheses, and a colon. The function body is indented and consists of statements.
+
+            <p>
+              Here's an example of a simple function named square that calculates the square of a number:
+            </p>
+  
+            <code>def square(number):
+              return number * number
+          </code>
+          The return statement specifies the value to be returned by the function. Function arguments in Python are passed by value.
+            <p>
+              Control structures: if...else statement and while statement
+Python provides the if...else statement for conditional execution and the while statement for repeated execution based on a condition:
+            </p>
+            <p>
+              The if...else statement syntax in Python is as follows:
+            </p>
+            <code>if condition:
+              statement_1
+          else:
+              statement_2
+          
+            </code>
+            The condition can be any expression that evaluates to either True or False. If the condition is True, statement_1 is executed; otherwise, statement_2 is executed.
+            <p>
+              You can also use elif (short for "else if") to test multiple conditions in sequence:
+            </p>
+  
+            <code>if condition_1:
+              statement_1
+          elif condition_2:
+              statement_2
+          elif condition_n:
+              statement_n
+          else:
+              statement_last
+          </code>
+          In Python, block statements are indicated by indentation, using spaces or tabs. It is recommended to use spaces for indentation.
+          <p>
+            The while statement is used to execute a block of statements as long as a specified condition is True. The syntax is as follows:
+          </p>
+            <code>while condition:
+              statement
+          </code>The condition is evaluated before each iteration. If the condition is True, the statement is executed, and the loop continues. When the condition becomes False, the loop terminates, and the program continues with the statement after the loop.
+
+          <p>
+            It's important to ensure that the condition eventually becomes False to prevent an infinite loop.
+          </p>
+  
+          </article>
+        </section>
+        <section class="main-section" id="Function_declarations">
+          <header>Function declarations</header>
+          <article>
+            In Python, a function definition (or declaration) consists of the def keyword followed by the function name, a list of arguments enclosed in parentheses, and a colon. The function body, containing statements, is indented.
+
+            <p>
+              Here's an example of a function named square that calculates the square of a number:
+            </p>
+  
+            <code>def square(number):
+              return number * number
+          </code>The return statement specifies the value to be returned by the function. Primitive parameters, such as numbers, are passed by value in Python, so changes within the function do not affect the original values.
+  
+            <p>
+              It's worth noting that Python uses indentation to define blocks, so it's crucial to indent the function body correctly.
+            </p>
+
+        <section class="main-section" id="Reference">
+          <header>Reference</header>
+          <article>
+            <ul>
+              <li>
+                All the documentation in this page is taken from
+                <a href="https://google.com" target="_blank">Google</a>
+              </li>
+            </ul>
+          </article>
+        </section>
+      </main>
+</body>
+</html>
